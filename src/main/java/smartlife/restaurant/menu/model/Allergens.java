@@ -7,5 +7,6 @@ public enum Allergens {
     GLUTEN,
     EGGS,
     FISH,
-    TREE_NUTS
+    TREE_NUTS;
+
 }
