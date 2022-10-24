@@ -58,9 +58,10 @@ public class NutritionInfo extends BaseEntity {
     @Getter
     private BigDecimal othersGrams = BigDecimal.valueOf(0);
 
-    @NonNull
-    @OneToOne
-    private Ingredient ingredient;
+    // TODO: I am not sure if I need this relation
+//    @NonNull
+//    @OneToOne
+//    private Ingredient ingredient;
 
     public NutritionInfo(@NonNull BigDecimal fatsGrams,         BigDecimal saturatesGrams,
                          @NonNull BigDecimal sugarsGrams,       @NonNull BigDecimal fibersGrams,

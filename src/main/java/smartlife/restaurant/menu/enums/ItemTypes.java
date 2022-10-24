@@ -1,6 +1,6 @@
-package smartlife.restaurant.menu.model;
+package smartlife.restaurant.menu.enums;
 
-public enum ItemType {
+public enum ItemTypes {
     SALAD,
     SOUP,
     MAIN_DISH,

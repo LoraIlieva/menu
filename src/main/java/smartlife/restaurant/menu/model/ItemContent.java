@@ -3,6 +3,7 @@ package smartlife.restaurant.menu.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import smartlife.restaurant.menu.enums.Units;
 import smartlife.restaurant.menu.model.superclasses.BaseEntity;
 
 import javax.persistence.*;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
-public class MealContent extends BaseEntity {
+public class ItemContent extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name="meal_item_id", nullable=false)

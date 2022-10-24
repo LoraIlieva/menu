@@ -2,6 +2,7 @@ package smartlife.restaurant.menu.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import smartlife.restaurant.menu.enums.Allergens;
 import smartlife.restaurant.menu.model.superclasses.BaseEntity;
 
 import javax.persistence.*;
@@ -35,6 +36,7 @@ public class Ingredient extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Set<Allergens> allergens = new TreeSet<>();
 
-    @OneToMany(mappedBy = "containedIngredient")
-    Set<MealContent> mealContentSet;
+    //TODO: I think that this relation is not necessary
+//    @OneToMany(mappedBy = "containedIngredient")
+//    Set<ItemContent> itemContentSet;
 }

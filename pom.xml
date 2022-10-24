@@ -37,6 +37,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/payload/payload -->
+		<dependency>
+			<groupId>payload</groupId>
+			<artifactId>payload</artifactId>
+			<version>0.4</version>
+		</dependency>
+
 
 
 

@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import smartlife.restaurant.menu.enums.ItemTypes;
 import smartlife.restaurant.menu.model.superclasses.BaseEntity;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity
+@Table(name = "items")
 public class Item extends BaseEntity {
 
     @NonNull
@@ -20,8 +22,7 @@ public class Item extends BaseEntity {
     private String name;
 
     @OneToMany(mappedBy = "mealItem")
-    Set<MealContent> mealContentSet;
-
+    Set<ItemContent> itemContentSet;
 
     @NonNull
     @Column(nullable = false)
@@ -32,8 +33,9 @@ public class Item extends BaseEntity {
     String instructions;
 
     @Enumerated(EnumType.STRING)
-    ItemType itemType;
+    ItemTypes itemType;
 
-    @OneToMany(mappedBy = "containedItem")
-    Set<MenuContent> menuContentSet;
+    //TODO: I think that this relation is not necessary
+//    @OneToMany(mappedBy = "containedItem")
+//    Set<MenuContent> menuContentSet;
 }

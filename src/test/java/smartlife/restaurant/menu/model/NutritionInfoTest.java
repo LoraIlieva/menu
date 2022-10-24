@@ -167,7 +167,8 @@ class NutritionInfoTest {
         NutritionInfo appleNutritionInfo = new NutritionInfo(
                 TEST_VALUE_ENERGY_KILO_CAL, TEST_VALUE_ENERGY_KILO_J, APPLE_FATS_GRAMS, APPLE_SATURATES_GRAMS,
                 APPLE_SUGARS_GRAMS, APPLE_FIBERS_GRAMS, APPLE_CPLX_CARBS_GRAMS, APPLE_PROTEIN_GRAMS, null,
-                TEST_VALUE_FOR_MACROS, new Ingredient()) ;
+                TEST_VALUE_FOR_MACROS //, new Ingredient()
+        ) ;
 
         assertEquals(TEST_VALUE_ENERGY_KILO_CAL, appleNutritionInfo.getEnergyKiloCal());
         assertEquals(TEST_VALUE_ENERGY_KILO_J, appleNutritionInfo.getEnergyKiloJ());

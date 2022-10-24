@@ -1,4 +1,4 @@
-package smartlife.restaurant.menu.model;
+package smartlife.restaurant.menu.enums;
 
 public enum Allergens {
     SOYBEANS,

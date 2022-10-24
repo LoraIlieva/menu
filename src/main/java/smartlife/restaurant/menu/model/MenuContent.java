@@ -1,5 +1,6 @@
 package smartlife.restaurant.menu.model;
 
+import smartlife.restaurant.menu.enums.ItemTypes;
 import smartlife.restaurant.menu.model.superclasses.BaseEntity;
 
 import javax.persistence.*;
@@ -12,7 +13,7 @@ public class MenuContent extends BaseEntity {
     Menu menu;
 
     @Enumerated(EnumType.STRING)
-    ItemType itemType;
+    ItemTypes itemType;
 
     @ManyToOne
     @JoinColumn(name="contained_item_id")
