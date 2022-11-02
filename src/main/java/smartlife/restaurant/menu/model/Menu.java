@@ -17,6 +17,6 @@ public class Menu extends BaseEntity {
 
     private String name;
 
-    @OneToMany(mappedBy = "menu")
+    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
     Set<MenuContent> containedItems;
 }

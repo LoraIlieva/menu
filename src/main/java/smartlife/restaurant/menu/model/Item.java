@@ -21,7 +21,7 @@ public class Item extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "mealItem")
+    @OneToMany(mappedBy = "mealItem", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     Set<ItemContent> itemContentSet;
 
     @NonNull
