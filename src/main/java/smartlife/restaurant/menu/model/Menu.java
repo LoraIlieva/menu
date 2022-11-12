@@ -13,6 +13,7 @@ import java.util.Set;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "name" }) })
 public class Menu extends BaseEntity {
 
     private String name;
